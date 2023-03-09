@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" 
+    integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" 
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Paulo Freire Instituto</title>
+</head>
+<body>
+    <header>
+        <div class="navbar-container">
+            <div class="navbar">
+                <div class="logo"><a href="#">Instituto Paulo Freire</a></div>
+                <ul class="links">
+                    <li><a href="hero">Inicio</a></li>
+                    <li><a href="nosotros">Nosotros</a></li>
+                    <li><a href="cursos">Cursos</a></li>
+                    <li><a href="contacto">Contacto</a></li>
+                </ul>
+                <a href="#" class="action_btn">Inscribite</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown_menu">
+                    <li><a href="hero">Inicio</a></li>
+                    <li><a href="nosotros">Nosotros</a></li>
+                    <li><a href="cursos">Cursos</a></li>
+                    <li><a href="contacto">Contacto</a></li>
+                    <li><a href="#" class="action_btn">Inscribite</a></li>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+    </main>
+        <section id="hero">
+            <div class="text">
+                <h2 class="title">Trabajá de lo que soñaste!</h2>
+                <p>Queremos ayudarte a cumplir tus sueños. <br>Con nuestros cursos online aprendé <br> cuando quieras, donde sea.</p>
+            </div>
+            <div class="image">
+                <div class="imagen-estudiante">
+                    <img src="./backg2.jpg" alt="estudiante" class="imagen">
+                </div>
+                <div class="imagen-formas"></div>
+            </div>
+        </section>
+        
+    <script>
+        const toggleBtn =document.querySelector('.toggle_btn')
+        const toggleBtnIcon =document.querySelector('.toggle_btn i')
+        const dropDownMenu =document.querySelector('.dropdown_menu')
+
+        toggleBtn.onclick = function () {
+            dropDownMenu.classList.toggle('open')
+            const isOpen = dropDownMenu.classList.contains('open')
+
+            toggleBtnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'
+            : 'fa-solid fa-bars'
+        }
+    </script>
+</body>
+</html>
